@@ -14,7 +14,7 @@ namespace PraktikumADO
     public partial class Form1 : Form
     {
         SqlConnection conn;
-        SqlCommand cd;
+        SqlCommand cmd;
         public Form1()
         {
             InitializeComponent();
@@ -59,7 +59,14 @@ namespace PraktikumADO
 
                 string query = "SELECT COUNT(*) FROM Mahasiswa";
 
-               cmd = new SqlCommand(query, conn);
+                cmd = new SqlCommand(query, conn);
+
+                int jumlah = (int)cmd.ExecuteScalar();
+
+                txtHasil.Text = jumlah.ToString();
+
+
+               
             }
         }
     }
