@@ -20,6 +20,13 @@ namespace PraktikumADO
             InitializeComponent();
         }
 
+        private void Koneksi()
+        {
+            conn = new SqlConnection(
+            "Data Source=DESKTOP-RAM2OFI\\PUTRII\\SARTIKAPUTRI;Initial Catalog=DBAkademikADO;Integrated Security=True"
+            );
+        }
+
         private void Form1_Load(object sender, EventArgs e)
         {
 
