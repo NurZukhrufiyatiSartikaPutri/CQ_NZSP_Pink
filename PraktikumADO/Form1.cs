@@ -58,6 +58,8 @@ namespace PraktikumADO
                 conn.Open();
 
                 string query = "SELECT COUNT(*) FROM Mahasiswa";
+
+               cmd = new SqlCommand(query, conn);
             }
         }
     }
